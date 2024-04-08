@@ -1,0 +1,2 @@
+[container.image]
+name="graalvm_service"
