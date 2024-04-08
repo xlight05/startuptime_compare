@@ -14,11 +14,8 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/hello", helloHandler)
-    go func() {
-        if err := http.ListenAndServe(":8080", nil); err != nil {
-            log.Fatalf("Server error: %v", err)
-        }
-    }()
-
 	log.Printf("Server started at %s", time.Now().Format(time.RFC3339Nano))
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		log.Fatalf("Server error: %v", err)
+	}
 }

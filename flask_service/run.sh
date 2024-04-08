@@ -21,7 +21,7 @@ echo "Endtime : $endTime"
 startTime=$(docker container inspect --format '{{ .State.StartedAt }}' "$container_name")
 echo "StartTime : $startTime"
 
-# rm temp_logs.txt
+rm temp_logs.txt
 
 # Cleanup: Stop and remove the container
 docker stop "$container_name" > /dev/null
