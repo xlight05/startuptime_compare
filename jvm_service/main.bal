@@ -11,7 +11,7 @@ service class SimpleService {
 }
 
 
-configurable int simpleServicePort = 8080;
+int simpleServicePort = 8080;
 
 public function main() returns error? {
     http:Listener conferenceListener = check new (simpleServicePort, timeout = 0);
