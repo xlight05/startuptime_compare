@@ -7,7 +7,7 @@ logging.Formatter.formatTime = (lambda self, record, datefmt=None: datetime.date
 logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
 
 app = Flask(__name__)
-@app.route("/")
+@app.route("/hello")
 def helloworld():
     return "Hello World!"
 
