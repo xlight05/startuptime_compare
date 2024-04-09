@@ -22,7 +22,7 @@ endpoints:
 - name: Hello
   # +required Numeric port value that gets exposed via this endpoint
   # Note: If you change the service port via environment variables, make sure to update this value accordingly.
-  port: 5000
+  port: 8080
   # +required Type of the traffic this endpoint is accepting. Example: REST, GraphQL, etc.
   # Allowed values: REST, GraphQL, GRPC
   type: REST
@@ -31,7 +31,7 @@ endpoints:
   networkVisibility: Public
   # +optional Context (base path) of the API that is exposed via this endpoint.
   # This is mandatory if the endpoint type is set to REST or GraphQL.
-  context: /hello
+  context: /
   # +optional Path to the schema definition file. Defaults to wild card route if not provided
   # This is only applicable to REST endpoint types.
   # The path should be relative to the docker context.

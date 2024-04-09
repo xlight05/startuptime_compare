@@ -11,6 +11,8 @@ FROM gcr.io/distroless/base
 
 WORKDIR /home/ballerina
 
+USER 10014
+EXPOSE 8080
 
 COPY --from=build /app/build/graalvm_service .
 

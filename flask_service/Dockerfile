@@ -13,6 +13,7 @@ RUN addgroup -g 10016 choreo && \
     adduser  --disabled-password  --no-create-home --uid 10016 --ingroup choreo choreouser
 
 USER 10014
-EXPOSE 5000
+EXPOSE 8080
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+# CMD [ "python3", "-m" , "flask", "run"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8080"]
