@@ -1,0 +1,6 @@
+{
+    "jvm_service" : "22.15",
+    "graalvm_service" : "11.74",
+    "flask_service" : "12.72",
+    "go_service" : "11.88"
+}
